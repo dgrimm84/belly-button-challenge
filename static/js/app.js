@@ -5,7 +5,8 @@ function buildMetadata(sample) {
     // get the metadata field
     metadata = data.metadata;
 
-    console.log(metadata); // Check if data is properly assigned to metadata
+    // Check if data is properly assigned to metadata
+    console.log(metadata); 
 
     // Filter the metadata for the object with the desired sample number
     metaDataResultArray = metadata.filter(sampleNum => sampleNum.id == sample);
@@ -33,6 +34,9 @@ function buildCharts(sample) {
 
     // Get the samples field
     samples = data.samples;
+
+    // Print the samples data to the console to confirm it loaded properly
+    console.log(samples); 
 
     // Filter the samples for the object with the desired sample number
     samplesResultArray = samples.filter(sampleNum => sampleNum.id == sample);
@@ -103,6 +107,9 @@ function init() {
 
     // Get the names field
     names = data.names;
+
+    // Print the results of the names query to the console to make sure it loaded correctly
+    console.log(names); 
 
     // Use d3 to select the dropdown with id of `#selDataset`
     dropdown = d3.select("#selDataset");
